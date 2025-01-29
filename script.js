@@ -1,24 +1,19 @@
-const container = document.querySelector('#container');
-const button = document.querySelector('button');
+const buttons = document.querySelectorAll('.item');
+const display = document.querySelector('.item0');
+
+console.log(buttons[3]);
 
 
 
+// function when button is clicked to display num
+let number = 0;
+buttons.forEach(bt => {
+    bt.addEventListener('click', (e) => {
+        number = e.target.innerHTML;
+        display.innerHTML = number;
+    });
+});
 
-function add(num1, num2){
-    console.log(num1 + num2);
-}
-
-function subtract(num1, num2){
-    console.log(num1 - num2);
-}
-
-function multiply(num1, num2){
-    console.log(num1 * num2);
-}
-
-function divide(num1, num2){
-    console.log(num1 / num2);
-}
 
 
 
